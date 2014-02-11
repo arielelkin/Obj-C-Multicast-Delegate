@@ -34,17 +34,26 @@
 {
     if (self = [super init])
     {
-        _delegates = [NSHashTable weakObjectsHashTable];
+        if (protocol == nil)
+        {
+            //if protocol argument is nil, then the MulticastDelegate instance
+            //itself is expected to respond to delegate callbacks.
+            //However, -[MulticastDelegate forwardInvocation:] doesn't get
+            //called in that case, and the app crashes because it's sent a message
+            //it doesn't respond to, as this check isn't made:
+            //([delegate respondsToSelector:[anInvocation selector]])
+
+            //The current workaround is to have this designated initialiser
+            //check that protocol isn't nil. But then again, would we want
+            //to allow MulticastDelegate to be initialised with no Protocol?
+
+            NSLog(@"%s: protocol parameter cannot be nil.", __FUNCTION__);
+            return nil;
+        }
+
         _protocol = protocol;
 
-        //Problem:
-
-        //if protocol argument is nil, then MulticastDelegate is
-        //expected to respond to delegate callbacks.
-        //However, -[MulticastDelegate forwardInvocation:] doesn't get
-        //called in that case, and the app crashes because
-        //this check isn't made:
-        //([delegate respondsToSelector:[anInvocation selector]])
+        _delegates = [NSHashTable weakObjectsHashTable];
 
     }
     return self;
