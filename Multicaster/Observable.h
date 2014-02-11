@@ -17,6 +17,6 @@
 
 @interface Observable : NSObject
 
-@property (nonatomic, readonly) MulticastDelegate *multicastDelegate;
+@property (nonatomic, readonly) MulticastDelegate<SomeDelegate> *multicastDelegate;
 
 @end
