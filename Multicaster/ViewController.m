@@ -47,6 +47,10 @@
     //which will ALSO be a delegate of observableThing:
     [observableThing.multicastDelegate addDelegate:anotherObserver];
 
+    //Try this:
+    //[self addAnObjectAsDelegateMultipleTimes];
+    //[self addAnObjectAsDelegateEvenThoughItDoesntConformToProtocol];
+
 }
 
 /*
@@ -79,7 +83,7 @@
 
  */
 
-- (void)addObjectAsDelegateEvenThoughItDoesntConformToProtocol
+- (void)addAnObjectAsDelegateEvenThoughItDoesntConformToProtocol
 {
     [observableThing.multicastDelegate addDelegate:self];
 }
