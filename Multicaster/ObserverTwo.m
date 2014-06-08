@@ -15,4 +15,9 @@
     NSLog(@"Observer Two instance got SomeDelegate callback");
 }
 
+- (BOOL)observableThingShouldDoSomething
+{
+    return YES;
+}
+
 @end

@@ -7,16 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MulticastDelegate.h"
 
 @protocol SomeDelegate <NSObject>
 
 -(void)observableThingDidSomething;
 
+@optional
+-(BOOL)observableThingShouldDoSomething;
+
 @end
 
 @interface Observable : NSObject
 
-@property (nonatomic, readonly) MulticastDelegate<SomeDelegate> *multicastDelegate;
+- (void)addDelegate:(id<SomeDelegate>)delegate;
+- (void)removeDelegate:(id<SomeDelegate>)delegate;
 
 @end

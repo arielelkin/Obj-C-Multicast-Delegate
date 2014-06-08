@@ -22,7 +22,6 @@
 		E83D327F1896E91100BFCDCB /* MulticasterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E83D327E1896E91100BFCDCB /* MulticasterTests.m */; };
 		E83D328A1896E92400BFCDCB /* Observable.m in Sources */ = {isa = PBXBuildFile; fileRef = E83D32891896E92400BFCDCB /* Observable.m */; };
 		E83D328D1897B06500BFCDCB /* ObserverOne.m in Sources */ = {isa = PBXBuildFile; fileRef = E83D328C1897B06500BFCDCB /* ObserverOne.m */; };
-		E83D32931897B20F00BFCDCB /* MulticastDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E83D32921897B20F00BFCDCB /* MulticastDelegate.m */; };
 		E8B3B69018A5110400AC26C6 /* ObserverTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B3B68F18A5110400AC26C6 /* ObserverTwo.m */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +58,6 @@
 		E83D32891896E92400BFCDCB /* Observable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Observable.m; sourceTree = "<group>"; };
 		E83D328B1897B06500BFCDCB /* ObserverOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObserverOne.h; sourceTree = "<group>"; };
 		E83D328C1897B06500BFCDCB /* ObserverOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObserverOne.m; sourceTree = "<group>"; };
-		E83D32911897B20F00BFCDCB /* MulticastDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MulticastDelegate.h; sourceTree = "<group>"; };
-		E83D32921897B20F00BFCDCB /* MulticastDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MulticastDelegate.m; sourceTree = "<group>"; };
 		E8B3B68E18A5110400AC26C6 /* ObserverTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObserverTwo.h; sourceTree = "<group>"; };
 		E8B3B68F18A5110400AC26C6 /* ObserverTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObserverTwo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,8 +125,6 @@
 				E83D32691896E91100BFCDCB /* ViewController.m */,
 				E83D32881896E92400BFCDCB /* Observable.h */,
 				E83D32891896E92400BFCDCB /* Observable.m */,
-				E83D32911897B20F00BFCDCB /* MulticastDelegate.h */,
-				E83D32921897B20F00BFCDCB /* MulticastDelegate.m */,
 				E83D328B1897B06500BFCDCB /* ObserverOne.h */,
 				E83D328C1897B06500BFCDCB /* ObserverOne.m */,
 				E8B3B68E18A5110400AC26C6 /* ObserverTwo.h */,
@@ -213,7 +208,7 @@
 		E83D32481896E91100BFCDCB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Saffron Digital";
 				TargetAttributes = {
 					E83D32701896E91100BFCDCB = {
@@ -268,7 +263,6 @@
 				E83D328D1897B06500BFCDCB /* ObserverOne.m in Sources */,
 				E83D326A1896E91100BFCDCB /* ViewController.m in Sources */,
 				E83D32641896E91100BFCDCB /* AppDelegate.m in Sources */,
-				E83D32931897B20F00BFCDCB /* MulticastDelegate.m in Sources */,
 				E83D328A1896E92400BFCDCB /* Observable.m in Sources */,
 				E8B3B69018A5110400AC26C6 /* ObserverTwo.m in Sources */,
 				E83D32601896E91100BFCDCB /* main.m in Sources */,
@@ -317,7 +311,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -356,7 +349,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -414,7 +406,6 @@
 		E83D32861896E91100BFCDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Multicaster.app/Multicaster";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -437,7 +428,6 @@
 		E83D32871896E91100BFCDCB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Multicaster.app/Multicaster";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
